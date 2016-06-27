@@ -437,6 +437,7 @@ body > section {
 #recent-works .item-inner {
   position: relative;
   margin: 0;
+height: 100px;
 }
 .portfolio-items,
 .portfolio-filter {
