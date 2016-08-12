@@ -14,3 +14,16 @@
 .napierAlt2{
     background-color: #329900;
 }
+.portfolio-item .item-inner {
+    margin: 0  ;
+    text-align: center;
+    color: black;
+    border: 1px;
+    border-color: #c31532;
+    border-style: outset;
+    min-height: 175px;
+}
+.portfolio-item .item-inner img{
+   /* width:100%;*/
+    max-height: 200px;
+}
