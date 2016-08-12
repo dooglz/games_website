@@ -41,22 +41,28 @@ function ParseFile(p){
     let img = "images/"+pagefilter+".jpg";
     for(let i =0; i < p.files.length; i++){
         if(p.files[i].endsWith(".jpg") || p.files[i].endsWith(".png")){
-            img = p.dir+"/"+p.files[i];
+            img = (p.dir+"/"+p.files[i]).replace(/\\/g,"/");
             break;
         }
     }
+    let href = null;
+    for(let i =0; i < p.files.length; i++){
+        if(p.files[i].endsWith(".pdf")){
+            href = ("/"+p.dir+"/"+(p.files[i])).replace(/\\/g,"/");
+            break;
+        }
+    }
+
     let newdiv = $('<li/>', {
         id: p.id,
         class: ("portfolio-item "+p.tags+" "+p.year).replace(/,/g," "),
     }).append(
         $('<div/>', {
             class: "item-inner"
-        }).append(
-            $('<img/>', {
-                src: img,
-                alt: p.title
-            })
-        ).append("<p>"+p.title+"</p>")
+        })
+        .append(
+            href ? ("<a href="+href+"><img src="+img+" alt="+p.title+"><p>"+p.title+"</p></img></a>") : ("<img src="+img+" alt="+p.title+"><p>"+p.title+"</p></img>")
+        )
     );
     $('#projectContainer').isotope( 'insert', newdiv );
     /*
