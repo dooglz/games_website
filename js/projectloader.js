@@ -17,6 +17,7 @@ function GetFilesList() {
             count--;
             if(count == 0){
                 $('#projectContainer').isotope('reLayout');
+                $('#projectContainer').isotope();
             }
         }, this);
         //

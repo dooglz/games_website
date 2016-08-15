@@ -14,7 +14,7 @@
 .napierAlt2{
     background-color: #329900;
 }
-.portfolio-item .item-inner {
+.proj .portfolio-item .item-inner{
     margin: 0  ;
     text-align: center;
     color: black;
@@ -22,6 +22,8 @@
     border-color: #c31532;
     border-style: outset;
     min-height: 175px;
+    /*height: 175px;
+    max-height: 175px;*/
 }
 .portfolio-item .item-inner img{
    /* width:100%;*/
