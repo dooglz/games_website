@@ -30,7 +30,54 @@
     max-height: 200px;
 }
 
+.slidecontainer{
+    min-height: 600px;
+   height: 600px;
+}
 
+.slidecontainerc h2 {
+    font-size: 36px;
+}
+.carousel-inner{
+   min-height: 600px;
+   height: 600px;
+}
+
+.carousel .item {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+       min-height: 600px;
+   height: 600px;
+     
+}
+ .carousel .item .carousel-content {
+      opacity: 0;
+      transition: opacity ease-in-out 500ms;
+}
+ .carousel .item.active .carousel-content{
+  opacity: 1;
+}
+.carousel-control {
+    width: 5%;
+}
+.navbar {
+min-height: 80px;
+}
+.carousel .btn {
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 0;
+  margin-top: 5px;
+}
+.carousel .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+ .carousel .boxed {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+}
 
 /* entire container, keeps perspective */
 .flip-container {
@@ -84,7 +131,11 @@
 .vert{
     min-height: 20px;
 }
-
+.aspectRatio
+{
+  width:60vw;
+  height:40vw;
+}
 .ggjpulse {
  animation:2s blinker linear infinite;
 -webkit-animation:2s blinker linear infinite;

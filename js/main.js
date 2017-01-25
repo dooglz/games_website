@@ -1,5 +1,4 @@
 jQuery(function($) {
-
 	//#main-slider
 	$(function(){
 		$('#main-slider.carousel').carousel({
@@ -7,18 +6,9 @@ jQuery(function($) {
 		});
 	});
 
-	$( '.centered' ).each(function( e ) {
-		$(this).css('margin-top',  ($('#main-slider').height() - $(this).height())/2);
-	});
-
-	$(window).resize(function(){
-		$( '.centered' ).each(function( e ) {
-			$(this).css('margin-top',  ($('#main-slider').height() - $(this).height())/2);
-		});
-	});
-
 	//portfolio
 	$(window).load(function(){
+        if((typeof variable === 'undefined')|| pagefilter === undefined || pagefilter == ""){return;}
 		$portfolio_selectors = $('.portfolio-filter >li>a');
 		if($portfolio_selectors!='undefined'){
 			$portfolio = $('.portfolio-items');
