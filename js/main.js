@@ -8,7 +8,7 @@ jQuery(function($) {
 
 	//portfolio
 	$(window).load(function(){
-        if((typeof variable === 'undefined')|| pagefilter === undefined || pagefilter == ""){return;}
+        if((typeof pagefilter === 'undefined')|| pagefilter === undefined || pagefilter == ""){return;}
 		$portfolio_selectors = $('.portfolio-filter >li>a');
 		if($portfolio_selectors!='undefined'){
 			$portfolio = $('.portfolio-items');
